@@ -1,0 +1,9 @@
+int countSquares(int N) {
+        if(ceil((double)sqrt(N)) == floor((double)sqrt(N))){
+            return (sqrt(N)-1);
+        }
+        else{
+            int ans = floor(sqrt(N));
+            return ans;   
+        }
+    }

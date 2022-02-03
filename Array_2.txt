@@ -1,0 +1,12 @@
+pair<long long int, long long int> getMinMax(long long int a[], int n) {
+    long long int mini = INT_MAX;
+    long long int maxi = INT_MIN;
+    for(long long int i=0;i<n;i++){
+        maxi = max(maxi,a[i]);
+        mini = min(mini,a[i]);
+    }
+    pair<long long int, long long int> ans;
+    ans.first = mini;
+    ans.second = maxi;
+    return ans;
+}

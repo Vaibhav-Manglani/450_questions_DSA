@@ -1,0 +1,19 @@
+vector<vector<int>> sortedMatrix(int N, vector<vector<int>> Mat) {
+        vector<int> sorted;
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                sorted.push_back(Mat[i][j]);
+            }
+        }
+        sort(sorted.begin(),sorted.end());
+        vector<vector<int>> ans;
+        for(int k=0;k<N*N;k=k+N){
+            vector<int> temp;
+            for(int l=0;l<N;l++){
+                temp.push_back(sorted[k+l]);
+            }
+            ans.push_back(temp);
+        }
+        
+        return ans;
+    }
